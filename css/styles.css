@@ -1,0 +1,195 @@
+/* Box Model Fix */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Color Palette
+#000000 - Black
+#34374C - State Blue
+#D72323 - Red
+#ffffff  - White
+*/
+
+/* Root Variables */
+:root {
+  --color-black: #000000;
+  --color-dark: #34374C;
+  --color-red: #D72323;
+  --color-light: #EEEEEE;
+}
+
+/* Styles */
+body {
+  background: var(--color-light);
+  color: var(--color-black);
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Navigation Bar */
+.site-nav {
+  position: fixed;       /* Causes it to stay at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-dark);
+  padding: 0.8rem 0;
+  z-index: 1000;         /* So it stays above content */
+}
+
+.nav-wrap {
+  max-width: 950px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.site-nav a {
+  color: var(--color-light);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.site-nav a:hover {
+  color: var(--color-red);
+}
+
+/* Header & Footer */
+header.site-header {
+  background: var(--color-dark);
+  color: var(--color-light);
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 60px; /* Pushed down to avoid overlap with fixed nav */
+}
+
+header h1,
+header h2 {
+  margin: 0;
+}
+
+footer {
+  background: var(--color-dark);
+  color: var(--color-light);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Profile Image */
+.profile-img {
+  border-radius: 50%;   /* Keeps the circular shape */
+  max-width: 200px;     /* This is a optional cap so it doesn’t get too large */
+  height: auto;
+}
+
+/* Step 6d: Column Narrow */
+.column-narrow {
+  width: 30%;
+  float: left;
+  padding-right: 3%;
+  min-height: 175px;
+}
+
+/* Step 6e: Column Wide */
+.column-wide {
+  width: 70%;
+  float: left;
+  min-height: 225px;
+}
+
+/* Footer Links */
+footer a {
+  color: var(--color-light);
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+footer a:hover {
+  color: var(--color-red);
+}
+
+.contact-info a {
+  padding: 10px;
+  display: inline-block;
+}
+
+/* Work Experience */
+.work-experience {
+  background: var(--color-light);
+  border-left: 5px solid var(--color-dark);
+  padding: 1rem;
+  margin: 1rem;
+}
+
+/* Job Logo */
+.job-logo {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 0 1rem 0;
+}
+
+/* Education */
+.education {
+  background: var(--color-light);
+  border-left: 5px solid var(--color-red);
+  padding: 1rem;
+  margin: 1rem;
+}
+
+/* CSUN Logo */
+.csun-logo {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 0 1rem 0;
+}
+
+/* Wrapper */
+.content-wrap {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 50px;
+  overflow: hidden;   /* Contains floated columns */
+}
+
+/* Work Experience with Background Image and Gradient Overlay */
+.work-experience {
+  position: relative;
+  background: 
+    linear-gradient(
+      rgba(52, 55, 76, 0.8),   /* Dark blue with 80% opacity */
+      rgba(0, 0, 0, 0.6)       /* Black with 60% opacity */
+    ),
+    url("../images/fresh.jpg") no-repeat center center;
+  background-size: cover;
+  color: var(--color-light);
+  border-left: 5px solid var(--color-dark);
+  padding: 2rem;
+  margin: 1rem;
+}
